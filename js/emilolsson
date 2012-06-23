@@ -1,3 +1,31 @@
+// Base Urls
+var baseUrl = 'http://emilolsson.com/shop/demo/layers';
+var stylesheetDir = 'http://emilolsson.com/shop/demo/layers/wp-content/themes/LayersOnePointZero-SUL';
+var pad = 'no';
+var mobile = 'no';
+// Settings Variables
+var buttonColor = '#ffffff';
+var buttonColorHover = '#dddddd';
+var defaultProjectInfo = 'true';
+var headerInnerHeight = 50;
+var comments = 'false';
+var infinityScroll = false;
+var bindMouseWheel = true;
+var whenFinishedBodyScroll = 'adjust';
+var whenFinishedBodyScrollSpeed = 400;
+var afterLastSlide = 'next';
+var transitionEase = 'easeInOutQuart';
+var verticalTransitionSpeed = 800;
+var horizontalTransitionSpeed = 250;
+var attachmentSize = 'large';
+var maxHeight = 700;
+var thumbnailWidth = 480;
+var menuPadding = 24;
+var imagePadding = 24;
+var menuModulWidth = 150;
+var showTwitterButton = true;
+var paddingFix = 98;
+
 var imgList = [];
 $.extend({preload: function(e, c) {
         var b = $.extend({init: function(f, g) {
@@ -22,7 +50,7 @@ $(document).ready(function() {
     var ao = $(window).height();
     var ag = $(window).width();
     var aI = 0;
-    var ai = 0;
+    var ai = 0; 
     var al = $(".projectSlideHolder:eq(0) .media").length;
     var aL = $(".project").length;
     var aK = 0;
