@@ -313,6 +313,15 @@ $('#work').on('click', function(event) {
   pos++;
 });
 
+window.setTimeout(
+  function() {
+    $('body').addClass('ready');
+  },
+  500
+);
+
+$('#page-title').fitText(0.5);
+
 // $(".projectSlideHolder:eq(" + aK + ") .media").each(function(aP) {
 //     if (aP < ai && aP > -1) {
 //         aD[aP] = $(this).width() + imagePadding;

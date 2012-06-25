@@ -45,12 +45,16 @@ h1, h2, h3, h4, h5, h6 {
 	height: 150px;
 	padding-top: 60px;
 
-	h1 {
-		background: url(../img/connormcsheffrey.png);
+	#logo {
+		display: inline-block;
 		float: left;
-		font-family: "proxima-nova", Helvetica, Arial, Sans-serif;
-		height: 100px;
-		width: 100px;
+
+		a {
+			background: url(../img/connormcsheffrey.png);
+			font-family: "proxima-nova", Helvetica, Arial, Sans-serif;
+			height: 100px;
+			width: 100px;
+		}
 	}
 
 	nav {
@@ -164,9 +168,9 @@ h1, h2, h3, h4, h5, h6 {
 	color: #33CCFF;
 }
 
-#footer {
+.footer {
 	background: #2C2C2C;
-	height: 100px;
+	padding: 1em;
 	width: 100%;
 
 	h2, h3 {
@@ -280,14 +284,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .blog .hero img {
-	height: auto;
-	max-width: 100%;
-	width: 100%;
+
 }
 
 .blog .hero h1 {
 	position: absolute;
-	white-space: nowrap;
 	z-index: 9999;
 }
 
@@ -310,14 +311,107 @@ h1, h2, h3, h4, h5, h6 {
 	background: #00b4e2;
 }
 
-.blog.responsive-tables .hero h1 {
-	color: #fff;
-	font-family: "franklin-gothic-urw-cond";
-	font-size: 3.5em;
-	top: 20.5%;
-	left: 4.7%;
-	text-transform: uppercase;
-	width: 30%;
+.blog.responsive-tables .hero {
+	padding: 50px 0;
+	height: 700px;
+	min-height: 100%;
+
+	h1 {
+		color: #fff;
+		font-family: "franklin-gothic-urw-cond";
+		font-size: 7.5em;
+		font-weight: 400;
+		line-height: .9em;
+		top: 3%;
+		left: 3%;
+		text-transform: uppercase;
+		-webkit-transition: all 0.2s ease-in-out;
+			 -moz-transition: all 0.2s ease-in-out;
+				-ms-transition: all 0.2s ease-in-out;
+		     -o-transition: all 0.2s ease-in-out;
+						transition: all 0.2s ease-in-out;
+		width: 50%;
+	}
+
+	img {
+		float: right;
+		max-height: 100%;
+	}
+
+	img + img {
+		margin-right: 30px;
+	}
+
+	#cinema-wireframe {
+		      	transform: translate3d(400px,0,0);
+		-webkit-transform: translate3d(400px,0,0);
+		   -moz-transform: translate3d(400px,0,0);
+	-webkit-transition: all 800ms cubic-bezier(0.230, 1.000, 0.320, 1.000); 
+	   -moz-transition: all 800ms cubic-bezier(0.230, 1.000, 0.320, 1.000); 
+	    -ms-transition: all 800ms cubic-bezier(0.230, 1.000, 0.320, 1.000); 
+	     -o-transition: all 800ms cubic-bezier(0.230, 1.000, 0.320, 1.000); 
+	        transition: all 800ms cubic-bezier(0.230, 1.000, 0.320, 1.000); /* easeOutQuint */
+-webkit-transition-timing-function: cubic-bezier(0.230, 1.000, 0.320, 1.000); 
+   -moz-transition-timing-function: cubic-bezier(0.230, 1.000, 0.320, 1.000); 
+    -ms-transition-timing-function: cubic-bezier(0.230, 1.000, 0.320, 1.000); 
+     -o-transition-timing-function: cubic-bezier(0.230, 1.000, 0.320, 1.000); 
+        transition-timing-function: cubic-bezier(0.230, 1.000, 0.320, 1.000); /* easeOutQuint */
+	}
+
+	#ipad-wireframe {
+			      	transform: translate3d(800px,0,0);
+			-webkit-transform: translate3d(800px,0,0);
+			   -moz-transform: translate3d(800px,0,0);
+	-webkit-transition: all 800ms cubic-bezier(0.230, 1.000, 0.320, 1.000) 200ms; 
+	   -moz-transition: all 800ms cubic-bezier(0.230, 1.000, 0.320, 1.000) 200ms; 
+	    -ms-transition: all 800ms cubic-bezier(0.230, 1.000, 0.320, 1.000) 200ms; 
+	     -o-transition: all 800ms cubic-bezier(0.230, 1.000, 0.320, 1.000) 200ms; 
+	        transition: all 800ms cubic-bezier(0.230, 1.000, 0.320, 1.000) 200ms; /* easeOutQuint */
+-webkit-transition-timing-function: cubic-bezier(0.230, 1.000, 0.320, 1.000); 
+   -moz-transition-timing-function: cubic-bezier(0.230, 1.000, 0.320, 1.000); 
+    -ms-transition-timing-function: cubic-bezier(0.230, 1.000, 0.320, 1.000); 
+     -o-transition-timing-function: cubic-bezier(0.230, 1.000, 0.320, 1.000); 
+        transition-timing-function: cubic-bezier(0.230, 1.000, 0.320, 1.000); /* easeOutQuint */
+		right: 435px;
+	}
+
+	#iphone-wireframe {
+			      	transform: translate3d(1000px,0,0);
+			-webkit-transform: translate3d(1000px,0,0);
+			   -moz-transform: translate3d(1000px,0,0);
+	-webkit-transition: all 800ms cubic-bezier(0.230, 1.000, 0.320, 1.000) 400ms; 
+	   -moz-transition: all 800ms cubic-bezier(0.230, 1.000, 0.320, 1.000) 400ms; 
+	    -ms-transition: all 800ms cubic-bezier(0.230, 1.000, 0.320, 1.000) 400ms; 
+	     -o-transition: all 800ms cubic-bezier(0.230, 1.000, 0.320, 1.000) 400ms; 
+	        transition: all 800ms cubic-bezier(0.230, 1.000, 0.320, 1.000) 400ms; /* easeOutQuint */
+-webkit-transition-timing-function: cubic-bezier(0.230, 1.000, 0.320, 1.000); 
+   -moz-transition-timing-function: cubic-bezier(0.230, 1.000, 0.320, 1.000); 
+    -ms-transition-timing-function: cubic-bezier(0.230, 1.000, 0.320, 1.000); 
+     -o-transition-timing-function: cubic-bezier(0.230, 1.000, 0.320, 1.000); 
+        transition-timing-function: cubic-bezier(0.230, 1.000, 0.320, 1.000); /* easeOutQuint */
+		right: 720px;
+	}
+
+}
+
+.ready.blog.responsive-tables .hero {
+	#cinema-wireframe {
+		      	transform: translate3d(0,0,0);
+		-webkit-transform: translate3d(0,0,0);
+		   -moz-transform: translate3d(0,0,0);
+	}
+
+	#ipad-wireframe {
+			      	transform: translate3d(0,0,0);
+			-webkit-transform: translate3d(0,0,0);
+			   -moz-transform: translate3d(0,0,0);
+	}
+
+	#iphone-wireframe {
+			      	transform: translate3d(0,0,0);
+			-webkit-transform: translate3d(0,0,0);
+			   -moz-transform: translate3d(0,0,0);
+	}
 }
 
 .blog .hero .iphone {
@@ -570,15 +664,53 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
+@media (max-width: 1024px) {
+	.hero {
+		height: 400px;
+	}
+
+	.blog.responsive-tables .hero {
+		height: 400px;
+	}
+}
+
 @media (max-width: 767px) {
 	body {
 		padding-left: 0;
 		padding-right: 0;
 	}
 
-	header {
-		padding-left: 20px;
-		padding-right: 20px;
+	#header {
+		background: #2C2C2C;
+		    -webkit-box-sizing: border-box;
+		       -moz-box-sizing: border-box;
+		            box-sizing: border-box;
+		height: 50px;
+		padding: 5px 15px;
+
+		#logo {
+			position: absolute;
+			z-index: 100;
+
+			a {
+				background-size: 50px 50px;
+				height: 50px;
+				width: 50px;
+			}
+		}
+
+		nav {
+			margin-top: 9px;
+
+			ul li:first-child::after {
+				height: 30px;
+				top: -5px;
+			}
+
+			ul li a {
+				color: #fff;
+			}
+		}
 	}
 
 	.row {
@@ -591,9 +723,17 @@ h1, h2, h3, h4, h5, h6 {
 	}
 
 	.hero {
-		min-height: 400px;
+		height: 150px;
+		margin-top: 0;
+		margin-bottom: 15px;
+	}
+
+	.blog.responsive-tables .hero {
+		height: 150px;
+		margin-bottom: 15px;
 	}
 }
+
 
 .ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; *line-height: 0; }
 .ir br { display: none; }
