@@ -28,8 +28,245 @@
    Author: @mcsheffrey
    ========================================================================== */
 
+   /* v1.0.2 */
+/* Core RS CSS file. 95% of time you shouldn't change anything here. */
+.royalSlider {
+	width: 600px;
+	height: 400px;
+	position: relative;
+	direction: ltr;
+}
+
+.rsWebkit3d .rsSlide,
+.rsWebkit3d .rsContainer,
+.rsWebkit3d .rsThumbs,
+.rsWebkit3d .rsPreloader,
+.rsWebkit3d img,
+.rsWebkit3d .rsOverflow,
+.rsWebkit3d .rsBtnCenterer,
+.rsWebkit3d .rsAbsoluteEl {
+	-webkit-backface-visibility: hidden;
+	-webkit-transform: translateZ(0); 
+}
+.rsFade.rsWebkit3d .rsSlide,
+.rsFade.rsWebkit3d img,
+.rsFade.rsWebkit3d .rsContainer {
+	-webkit-transform: none;
+}
+.rsOverflow {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+	float: left;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+
+.rsContainer {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+
+.rsArrow,
+.rsThumbsArrow {
+	cursor: pointer;
+}
+
+.rsThumb {
+	float: left;
+	position: relative;
+}
+
+.rsArrow,
+.rsNav,
+.rsThumbsArrow {
+	opacity: 1;
+	-webkit-transition:opacity 0.3s linear;
+	-moz-transition:opacity 0.3s linear;
+	-o-transition:opacity 0.3s linear;
+	transition:opacity 0.3s linear;
+}
+.rsHidden {
+	opacity: 0;
+	visibility: hidden;
+	-webkit-transition:visibility 0s linear 0.3s,opacity 0.3s linear;
+	-moz-transition:visibility 0s linear 0.3s,opacity 0.3s linear;
+	-o-transition:visibility 0s linear 0.3s,opacity 0.3s linear;
+	transition:visibility 0s linear 0.3s,opacity 0.3s linear;
+}
+
+
+.rsGCaption {
+	width: 100%;
+	float: left;
+	text-align: center;
+}
+
+/* Fullscreen options, very important ^^ */
+.royalSlider.rsFullscreen {
+	position: fixed !important;
+	height: auto !important;
+	width: auto !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	z-index: 2147483647 !important;
+	top: 0 !important;
+	left: 0 !important;
+	bottom: 0 !important;
+	right: 0 !important;
+}
+
+.royalSlider .rsSlide.rsFakePreloader {
+	opacity: 1 !important;
+	-webkit-transition: 0s;
+	-moz-transition: 0s;
+	-o-transition:  0s;
+	transition:  0s;
+	display: none;
+}
+
+.rsSlide {
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: block;
+	overflow: hidden;
+	
+	height: 100%;
+	width: 100%;
+}
+
+.royalSlider.rsAutoHeight,
+.rsAutoHeight .rsSlide {
+	height: auto;
+}
+
+.rsContent {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.rsPreloader {
+	position:absolute;
+	z-index: 0;	
+}
+
+.rsNav {
+	-moz-user-select: -moz-none;
+	-webkit-user-select: none;
+	user-select: none;
+}
+.rsNavItem {
+	-webkit-tap-highlight-color:rgba(0,0,0,0.25);
+}
+
+.rsThumbs {
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+	float: left;
+	z-index: 22;
+}
+.rsTabs {
+	float: left;
+}
+.rsTabs,
+.rsThumbs {
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+
+
+.rsVideoContainer {
+	/*left: 0;
+	top: 0;
+	position: absolute;*/
+	/*width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	float: left;*/
+	width: auto;
+	height: auto;
+	line-height: 0;
+	position: relative;
+}
+.rsVideoFrameHolder {
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: #141414;
+	opacity: 0;
+	-webkit-transition: .3s;
+}
+.rsVideoFrameHolder.rsVideoActive {
+	opacity: 1;
+}
+.rsVideoContainer iframe,
+.rsVideoContainer video,
+.rsVideoContainer embed,
+.rsVideoContainer .rsVideoObj {
+	position: absolute;
+	z-index: 0;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+/* ios controls over video bug, shifting video */
+.rsVideoContainer.rsIOSVideo iframe,
+.rsVideoContainer.rsIOSVideo video,
+.rsVideoContainer.rsIOSVideo embed {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding-right: 44px;
+}
+
+.rsABlock {
+	left: 0;
+	top: 0;
+	position: absolute;
+	z-index: 15;
+	-webkit-backface-visibility: hidden;
+}
+
+.grab-cursor {
+	cursor:url(grab.png) 8 8, move; 
+}
+
+.grabbing-cursor{ 
+	cursor:url(grabbing.png) 8 8, move;
+}
+
+.rsNoDrag {
+	cursor: auto;
+}
+
+.rsLink {
+	left:0;
+	top:0;
+	position:absolute;
+	width:100%;
+	height:100%;
+	display:block;	
+	z-index: 20;
+	background: url(blank.gif);
+	-webkit-backface-visibility: hidden;
+}
+
+
 body {
+	font-family: "proxima-nova", Helvetica, Arial, sans-serif;
 	padding-top: 0;
+}
+
+p {
+	font-family: "proxima-nova", Helvetica, Arial, sans-serif;
 }
 
 * {
@@ -39,6 +276,17 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: "proxima-nova", Helvetica, Arial, Sans-serif;
+}
+
+.sliderContainer {
+	background: #07112f; /* Old browsers */
+	background: -moz-linear-gradient(top, #07112f 0%, #00001a 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#07112f), color-stop(100%,#00001a)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #07112f 0%,#00001a 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #07112f 0%,#00001a 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #07112f 0%,#00001a 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #07112f 0%,#00001a 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#07112f', endColorstr='#00001a',GradientType=0 ); /* IE6-9 */
 }
 
 #header {
@@ -107,6 +355,50 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
+
+#about {
+	min-height: 0;
+	text-align: center;
+}
+
+#about img {
+	
+	width: 100%;
+}
+
+#about h2, 
+#about h3 {
+	color: #fff;
+	position: absolute;
+	left: 50%;
+	z-index: 9999;
+	-webkit-animation: headlineEase 1s;
+-moz-animation: headlineEase 1s;
+-ms-animation: headlineEase 1s;
+-o-animation: headlineEase 1s;
+animation: headlineEase 1s;
+}
+
+#about h2 {
+	font-size: 3em;
+	top: 50%;
+	text-transform: uppercase;
+}
+
+// #about h2:before {
+// 	content: ' ';
+// 	display: block;
+// 	width: 304px;
+// 	margin: 0 auto 20px;
+// 	height: 5px;
+// 	background: white;
+// }
+
+#about h3 {
+	font-weight: 200;
+	top: 60%;
+}
+
 .page-header h1 {
 	display: inline-block;
 }
@@ -169,16 +461,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer {
-	background: #2C2C2C;
+	background: #000;
 	padding: 1em;
 	width: 100%;
 
 	h2, h3 {
-		color: #999;
+		color: #666;
 	}
 
 	p {
-		color: white;
+		color: #666;
+		margin: 0;
 	}
 }
 
@@ -465,6 +758,34 @@ h1, h2, h3, h4, h5, h6 {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#99ffffff',GradientType=0 ); /* IE6-9 */
 }
 
+a.button {
+	color: 666666;
+	background: #F4F4F4;
+	display: block;
+	padding: 7%;
+	color: #666;
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.2em;
+	border: 1px solid #EDEDED;
+	border-radius: 3px;
+	text-shadow: 1px 0 1px #fff, inset 1px 0 1px rgba(0,0,0,.1);
+		-webkit-transition: all 800ms cubic-bezier(0.230, 1.000, 0.320, 1.000); 
+	   -moz-transition: all 800ms cubic-bezier(0.230, 1.000, 0.320, 1.000); 
+	    -ms-transition: all 800ms cubic-bezier(0.230, 1.000, 0.320, 1.000); 
+	     -o-transition: all 800ms cubic-bezier(0.230, 1.000, 0.320, 1.000); 
+	        transition: all 800ms cubic-bezier(0.230, 1.000, 0.320, 1.000); /* easeOutQuint */
+	        text-decoration: none;
+}
+
+a.button:hover {
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f5f5', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
+	-webkit-box-shadow: inset 0 2px 2px 0 rgba(0,0,0,.05);
+	   -moz-box-shadow: inset 0 2px 2px 0 rgba(0,0,0,.05);
+	        box-shadow: inset 0 2px 2px 0 rgba(0,0,0,.05); /* inset offset-x offset-y blur spread color */
+	
+}
+
 .hero-nav {
 	border: 0;
 	display: inline-block;
@@ -658,6 +979,105 @@ h1, h2, h3, h4, h5, h6 {
 						transform: rotate(-45deg);
 	}
 
+@-webkit-keyframes headlineEase {
+  0% { opacity: 0; -webkit-transform: translateY(-25px); }
+  100% { opacity: 1; -webkit-transform: translateY(0); }
+}
+
+@-moz-keyframes headlineEase {
+  0% { opacity: 0; -moz-transform: translateY(-25px); }
+  100% { opacity: 1; -moz-transform: translateY(0); }
+}
+
+@-ms-keyframes headlineEase {
+  0% { opacity: 0; -ms-transform: translateY(-25px); }
+  100% { opacity: 1; -ms-transform: translateY(0); }
+}
+
+@-o-keyframes headlineEase {
+  0% { opacity: 0; -o-transform: translateY(-25px); }
+  100% { opacity: 1; -o-transform: translateY(0); }
+}
+
+@keyframes headlineEase {
+  0% { opacity: 0; transform: translateY(-25px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+#gallery-1 {
+  width: 50%;
+  margin: 24px 25% 66px;
+  color: #FFF;
+}
+.visibleNearby {
+  width: 100%;
+  overflow: hidden;
+}
+.visibleNearby .rsGCaption {
+  margin-top: 12px;
+  font-size: 16px;
+  line-height: 18px;
+  padding-bottom: 16px;
+}
+.visibleNearby .rsGCaption span {
+  display: block;
+  clear: both;
+  color: #bbb;
+  font-size: 14px;
+  line-height: 22px;
+}
+.visibleNearby .rsOverflow,
+.visibleNearby .rsSlide {
+  background: none;
+}
+.visibleNearby .rsOverflow {
+  overflow: visible;
+}
+
+
+/* Scaling transforms */
+.visibleNearby .rsSlide img {
+  opacity: 0.45;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+
+  -webkit-transform: scale(0.9);  
+  -moz-transform: scale(0.9); 
+  -ms-transform: scale(0.9);
+  -o-transform: scale(0.9);
+  transform: scale(0.9);
+}
+.visibleNearby .rsActiveSlide img {
+  opacity: 1;
+  -webkit-transform: scale(1);  
+  -moz-transform: scale(1); 
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+}
+
+/* Non-linear resizing on smaller screens */
+@media screen and (min-width: 0px) and (max-width: 900px) { 
+   #gallery-1 {
+    width: 62%;
+    margin-left: 19%;
+    padding: 12px 0 12px;
+    color: #FFF;
+  }
+  #gallery-1 .rsOverflow,
+  .royalSlider#gallery-1 {
+    height: 400px !important;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 500px) { 
+  #gallery-1 .rsOverflow,
+  .royalSlider#gallery-1 {
+    height: 300px !important;
+  }
+}
+
+
 @media (max-width: 1040px) {
 	#bose li {
 		width: 90%;
@@ -732,6 +1152,21 @@ h1, h2, h3, h4, h5, h6 {
 		height: 150px;
 		margin-bottom: 15px;
 	}
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) { 
+  
+  #header {
+
+	#logo {
+
+		a {
+			background: url(../img/connormcsheffrey@2x.png);
+			background-size: 100px 100px;
+		}
+	}
+}
+
 }
 
 
