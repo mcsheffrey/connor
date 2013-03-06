@@ -1,0 +1,379 @@
+/* ==========================================================================
+   HTML5 Boilerplate styles - h5bp.com (generated via initializr.com)
+   ========================================================================== */
+/* line 9, ../sass/main.scss */
+html,
+button,
+input,
+select,
+textarea {
+  color: #222;
+}
+
+/* line 13, ../sass/main.scss */
+body {
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/* line 18, ../sass/main.scss */
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/* line 23, ../sass/main.scss */
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/* line 28, ../sass/main.scss */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/* line 37, ../sass/main.scss */
+img {
+  vertical-align: middle;
+}
+
+/* line 41, ../sass/main.scss */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 47, ../sass/main.scss */
+textarea {
+  resize: vertical;
+}
+
+/* line 51, ../sass/main.scss */
+.chromeframe {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+/* line 62, ../sass/main.scss */
+body {
+  font-family: "proxima-nova", Helvetica, Arial, Sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  color: #333333;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  text-align: center;
+  padding-top: 200px;
+}
+
+/* line 73, ../sass/main.scss */
+body.blog {
+  background: url(/img/golden-gate-bridge.jpg) 0 200px fixed no-repeat;
+  background-size: 100% auto;
+}
+
+/* line 78, ../sass/main.scss */
+.masthead {
+  position: absolute;
+  max-width: auto;
+  width: 100%;
+}
+
+/* line 84, ../sass/main.scss */
+#header {
+  background: rgba(255, 255, 255, 0.95);
+  height: 150px;
+  padding-top: 50px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+/* line 93, ../sass/main.scss */
+#header #logo {
+  display: inline-block;
+  float: left;
+  margin: 0;
+}
+/* line 98, ../sass/main.scss */
+#header #logo a {
+  background: url(../img/connormcsheffrey.png);
+  background-size: 100% auto;
+  display: block;
+  height: 80px;
+  width: 80px;
+}
+/* line 107, ../sass/main.scss */
+#header nav {
+  float: right;
+  margin: 25px 0 0 0;
+}
+/* line 111, ../sass/main.scss */
+#header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 116, ../sass/main.scss */
+#header nav ul li {
+  float: left;
+  margin: 0 20px 0 0;
+  padding: 0 20px 0 0;
+  position: relative;
+}
+/* line 122, ../sass/main.scss */
+#header nav ul li a {
+  color: #353535;
+  font-family: "proxima-nova", Helvetica, Arial, Sans-serif;
+  font-size: 2em;
+  font-weight: 200;
+  text-decoration: none;
+}
+/* line 132, ../sass/main.scss */
+#header nav ul li.active a {
+  text-decoration: line-through;
+}
+/* line 136, ../sass/main.scss */
+#header nav ul li:first-child:after {
+  border-right: 1px solid #d6d6d6;
+  content: "";
+  display: block;
+  height: 50px;
+  font-size: 36px;
+  margin: 0 0 20px 0;
+  -webkit-transform: rotate(25deg);
+  -moz-transform: rotate(25deg);
+  -ms-transform: rotate(25deg);
+  -o-transform: rotate(25deg);
+  transform: rotate(25deg);
+  position: absolute;
+  right: 0;
+  top: -15px;
+}
+/* line 153, ../sass/main.scss */
+#header nav ul li:last-child {
+  margin: 0;
+  padding: 0;
+}
+/* line 159, ../sass/main.scss */
+#header nav ul:hover li a {
+  text-decoration: none;
+}
+/* line 162, ../sass/main.scss */
+#header nav ul:hover li a:hover {
+  text-decoration: line-through;
+}
+
+/* line 169, ../sass/main.scss */
+h2 {
+  letter-spacing: .1em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+/* line 175, ../sass/main.scss */
+h3 {
+  margin: 0 0 20px 0;
+  opacity: .4;
+}
+
+/* line 180, ../sass/main.scss */
+p {
+  margin: 0 0 20px;
+  line-height: 1.5em;
+  font-size: 16px;
+}
+
+/* line 186, ../sass/main.scss */
+img {
+  max-width: 100%;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+  /* line 196, ../sass/main.scss */
+  #header #logo a {
+    background: url(../img/connormcsheffrey@2x.png);
+    background-size: 100px 100px;
+  }
+}
+/* line 205, ../sass/main.scss */
+#content {
+  background: #fff;
+  margin-top: 100%;
+}
+
+/* line 210, ../sass/main.scss */
+.post-title {
+  color: #fff;
+  font-size: 100px;
+  font-weight: 600;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+}
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+/* line 243, ../sass/main.scss */
+.ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  *text-indent: -9999px;
+}
+
+/* line 250, ../sass/main.scss */
+.ir:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 150%;
+}
+
+/* line 257, ../sass/main.scss */
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+/* line 262, ../sass/main.scss */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/* line 274, ../sass/main.scss */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+/* line 283, ../sass/main.scss */
+.invisible {
+  visibility: hidden;
+}
+
+/* line 288, ../sass/main.scss */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+/* line 293, ../sass/main.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/* line 297, ../sass/main.scss */
+.clearfix {
+  *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+@media print {
+  /* line 306, ../sass/main.scss */
+  * {
+    background: transparent !important;
+    color: black !important;
+    /* Black prints faster: h5bp.com/s */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  /* line 314, ../sass/main.scss */
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  /* line 318, ../sass/main.scss */
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  /* line 322, ../sass/main.scss */
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links for images, or javascript/internal links
+   */
+  /* line 332, ../sass/main.scss */
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+
+  /* line 337, ../sass/main.scss */
+  pre,
+  blockquote {
+    border: 1px solid #999999;
+    page-break-inside: avoid;
+  }
+
+  /* line 342, ../sass/main.scss */
+  thead {
+    display: table-header-group;
+    /* h5bp.com/t */
+  }
+
+  /* line 347, ../sass/main.scss */
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  /* line 351, ../sass/main.scss */
+  img {
+    max-width: 100% !important;
+  }
+
+  @page {
+    margin: 0.5cm;
+}
+
+  /* line 361, ../sass/main.scss */
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* line 367, ../sass/main.scss */
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
